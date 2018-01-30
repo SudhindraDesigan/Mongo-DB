@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<form action="/updatePerson" method="POST">
+		Enter id to update : <input type="text" name="id" id="id" th:value="${id}" /> <br/>
+			
+		
+		
+		
+		<input type="radio" id="name" name="options" value="name" /> Name <br/>
+		<input type="radio" id="mark" name="options" value="mark"/> Mark <br/>
+		<input type="radio" id="course" name="options" value="course"/> Course <br/>
+		
+		
+		Enter text to update  : <input type="text" name="text" id="text" th:value="${text}" /> 
+			
+			<input type="submit" value="Update" /> 
+		</form>
+</body>
+</html>

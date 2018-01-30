@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Sample MongoDB web application with SpringBoot</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Mark</th>
+				<th>Course</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="person : ${Persons}">
+				<td th:text="${person.id}"></td>
+				<td th:text="${person.name}"></td>
+				<td th:text="${person.mark}"></td>
+				<td th:text="${person.course}"></td>
+			</tr>
+		</tbody>
+			</table>
+		
+		<h2> CRUD Operations </h2>
+			
+		<form action="/search" method="POST">
+		1. Enter name to search : <input type="text" name="search" id="search" th:value="${search}" /> 
+			
+			<input type="submit" value="Search" /> 
+		</form>
+		<br/>
+		
+		2. <a th:href="@{/add}"> Click here to add person details</a> <br/><br/>
+		
+		
+		3. <a th:href="@{/delete}"> Click here to delete person details</a> <br/><br/>
+		
+		4. <a th:href="@{/update}"> Click here to update person details</a> <br/><br/>
+		
+		
+
+
+</body>
+</html>
